@@ -48,7 +48,7 @@ $(document).ready(function(){
 });
 
 function initializeMenuState(){
-    hamburgerMode = $(window).width() < 1000;
+    hamburgerMode = $(window).width() < 1024;
     menuVisible = !hamburgerMode;
     $(".flex-nav ul").hide();
 }
