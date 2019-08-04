@@ -8,12 +8,12 @@
 }
 
 body{
-    background-color:#eee;
+    background-color:#ddd;
 }
 /*sekcja header*/
 header{
-    height: 100vh;
-    max-width: 1170px;
+   
+    max-width:1170px;
     margin-left:auto;
     margin-right:auto;
     background-color:#F4BA00;
@@ -27,10 +27,7 @@ header{
 }
 
 header img{
-    height:70vh;
-    position:absolute;
-    bottom:0;
-    right:-55%;
+  width: 100%;
 }
 
 .hamburger, .cross{
@@ -42,12 +39,12 @@ header img{
     display:none;
 }
 
-.flex-nav a{
-    color: white;
+.flex-nav a
+{
+    color: #ba00f4;
     font-weight:400;
     letter-spacing: 2px;
     text-decoration: none;
-    
     padding: 30px 5px;
     display: inline-block;
     width: 100%;
@@ -55,41 +52,55 @@ header img{
     transition: all 0.5s;
 
 }
-
+.flex-nav a:hover{
+    color: #00f4ba;
+}
 .flex-nav li:hover{
-    background-color:#444;
-
+    background-color:#8000a8;
+    color: #00f4ba;
+    border-radius:5px;
 }
 
 .flex-nav ul{
-    position:absolute;
-    top:0;
+    position:fixed;
     right:0;
-    background-color: #222;
+    
+    top:0;
+    bottom:0;
+    width:100%;
+    height: 10vh;
+    background-color:#00f4ba;
     opacity:0.75;
-    height:100vh;
-    width:45VW;
-    border: 1px solid black;
+    border: 1px solid #00c193;
+    display:flex;
+    flex:3;
     list-style: none;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
-    flex-direction:column;
     z-index:3;
-    display:none;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    justify-content:space-between;
+   
     
     
 }
 
 .flex-nav li{
     display:block;
-    border-bottom:1px solid #333;
-    border-radius:5%;
+    border-bottom:1px solid #00dba7;
+    text-transform:uppercase;
+    font-size:1.3em;
+    border-right:1px solid #00dba7;
+    box-shadow: 1px 0px 0px 0px #00c193;
+    align-items:center;
+    flex:3;
 }
 
 header hgroup{
     position:absolute;
-    top:25%;
-    left:25%;
+    top:50%;
+    left:50%;
     z-index:2;
     text-align:center;
     text-transform:uppercase;
@@ -98,11 +109,11 @@ header hgroup{
 }
 
 header h1{
-    font-size:2rem;
+    font-size:3em;
 }
 
 header h3{
-    font-size:1.5rem;
+    font-size:1.5em;
 }
 
 .arrow{
@@ -116,6 +127,7 @@ header h3{
     font-size:2rem;
     text-align:center;
     animation: arrowColor 2s infinite reverse;
+    display:none;
    
 }
 
@@ -130,64 +142,89 @@ header h3{
     min-height:100vh;
     margin-left:auto;
     margin-right:auto;
-    background-color:rgba(244, 186, 0, 0.4);
+    background-color:#F4BA00;
     position:relative;
     z-index:2;
 
 }
-
-/*aboutmepage*/
-.m-halfbleed{
-    
-    display: flex;
-   
-}
-    
-.element1, .element2{
-      flex:1;
-      flex-basis:  100%;
-      
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-}
-.element1 h2{
-    background-color: #222;
-    text-align:center;
+h2{
+    text-align:right;
     text-transform:uppercase;
-} 
-.element1{
-        color:#fff;
-        
-        border-radius:10px;
-      }
-.element2{
-       
-        color: black;
-        line-height:2;
-        text-align:justify;
-        padding:15%;
-      }
-      
+    padding:10% 5em 2em;
+    
 
-.m-halfbleed img{
-margin-top:30px;
-display: block;
-max-width: 85%;
-margin:20% auto 0;
+    color:#ba00f4
+}
+
+
+
+h2::after{
+    content:"";
+    display:block;
+    width:70%;
+    height:1px;
+    
+    margin-bottom:3%;
+    background-color:#00dba7;
+    
+}
+
+h2:nth-child(odd)::after{
+    float:right;
+}
+/*aboutmepage*/
+
+.aboutmeText{
+    line-height:2;
+    
+    margin-left:10%;
+    margin-right:10%;
+    text-align:justify;
+}
+.aboutmeText img{
+    float:left;
+    padding:0 2em 0 0 ;
+   
 }
 /*sekcja hobby*/
 .hobbyWrapper{
     display:flex;
-    flex-direction:column;
+    flex-direction:row;
     flex-wrap:wrap;
+    padding: 0 2em;
+}
+
+.box1{
+    background-image:url('../img/t2.jpg');
+}
+.box4{
+    background-image:url('../img/t1.jpg');
+}
+.box5{
+    background-image:url('../img/t3.jpg');
+}
+.box1, .box4, .box5{
+    background-size:cover;
+    min-height:50vh;
+    background-repeat:no-repeat;
+}
+.box2, .box3, .box6{
+    padding:2em;
+    text-align:justify;
+    line-height:1.5;
+    background-color:#ba00f4;
+    color:white;
+}
+
+.box3{
+    background-color:#00dba7;
 }
 .box1, .box2, .box3, .box4, .box5, .box6{
-    margin: 0;
-    border: 1px solid #000000;
-    color: #ffffff;
+    flex-basis:50%;
     
 }
+
+
 
 .hobbyWrapper img{
     width:100%;
@@ -199,16 +236,14 @@ margin:20% auto 0;
     display:flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-top:20px;
-    margin-bottom:20px;
+    padding-bottom:5em;
+    z-index:4;
 
 
 
 }
 
 .picture{
-    margin:10px;
-    width:80%;
     background:white;
     padding:10px;
     opacity:0.8;
@@ -218,10 +253,11 @@ margin:20% auto 0;
     display:flex;
     justify-content:space-around;
     flex-wrap:wrap;
-    
+    width:20em;
+    height:25em;
     transition: all 0.3s linear;
+   
 }
-
 .picture img{
     flex-basis:100%;
     width:80%;
@@ -231,13 +267,37 @@ margin:20% auto 0;
     flex-basis:100%;
     margin-top:10px;
     overflow-wrap:break-word;
-    font-size:14px;
+    font-size:0.6em;
+}
+.picture:nth-child(odd){
+    transform:rotate(5deg);
+}
+
+.picture:nth-child(even){
+    transform:rotate(-5deg);
 }
 
 .picture:hover{
     opacity:1;
-    transform:scale(1.1);
+    transform:scale(1.2);
+    z-index:3000;
 }
+
+
+
+.picture img{
+    width:60%;
+    align-self:center;
+
+}
+
+.picture figcaption{
+    font-size:13px;
+    text-align: center;
+    line-height: 1.5;
+    align-self: flex-start;
+}
+
 
 
     
@@ -249,11 +309,7 @@ margin:20% auto 0;
     margin-right: auto;
     padding: 1em;
   }
-  @media (min-width: 700px) {
-    .contact {
-      padding: 10%;
-    }
-  }
+  
   
   h3,
   ul {
@@ -282,17 +338,7 @@ margin:20% auto 0;
   .contactWrapper > * {
     padding: 1em;
   }
-  @media (min-width: 700px) {
-    .contactWrapper {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      justify-content:center;
-      
-    }
-    .contactWrapper > * {
-      padding: 2em 2em;
-    }
-  }
+ 
   
   ul {
     list-style: none;
@@ -300,8 +346,8 @@ margin:20% auto 0;
   }
   
   .contacts {
-    background: #222;
-    color: #fff;
+    background: #ba00f4;
+    color:white;
     
   }
   
@@ -332,12 +378,12 @@ margin:20% auto 0;
   }
   
   button {
-    background: lightgrey;
+    background: #ba00f4;
     width: 100%;
     border: 0;
   }
   button:hover, button:focus {
-    background: gold;
+    background: #00dba7;
     outline: 0;
   }
 @media(orientation: portrait){
@@ -346,48 +392,151 @@ margin:20% auto 0;
         white-space: pre;
 
     }
+
+    .flex-nav ul{
+        height:5vh;
+    }
+
+    .aboutmeText{
+        margin-top:20%;
+    }
   
 
     
 }
 
-@media(orientation: landscape){
-    header img{
-        height:100%;
-        left:-30%;
-        width:60%;
-    }
 
+
+@media(max-width: 599px){
+    .flex-nav ul{
+        flex-direction:column;
+        width:65%;
+        height:100vh;
+        justify-items:flex-start;
+        position:absolute;
+        top:0;
+        right:0;
+    }
+    header{
+        height:100vh;
+    }
+    header img{
+        position:absolute;
+        left:0;
+        bottom:0;
+    }
     header hgroup{
+        top:30%;
         left:30%;
     }
-}
-
-@media(min-width: 375px) and (orientation:landscape){
-    header img{
-        height:100%;
-        left: 0;
+    header h1{
+        margin-bottom:10%;
+        font-size:1.5rem;
     }
-}
-
-@media(min-width: 375px){
-    header img{
-        left: -35%;
-        height:70%;
-    }
-}
-
- @media(min-width: 700px){
-    header img{
-        left:0;
-        width:100%;
-        height:70%;
-       
-    }
-    header hgroup{
-        top:15%;
-        left:50%;
+            
+          
+   
         
+    header h3{
+        font-size:1rem;
+    }
+
+    .arrow{
+        display:block;
+    }
+    h2{
+        font-size:1em;
+        padding: 1em;
+    }
+    .aboutmeText{
+        display:flex;
+        flex-direction:column;
+    }
+
+    .aboutmeText img {
+       width:100%;
+       padding:0;
+    }
+
+    .hobbyWrapper{
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+    }
+    .box1, .box4, .box5{
+        min-height:300px;
+    }
+
+        
+   
+    .box1, .box2, .box3, .box4, .box5, .box6{
+        flex-basis:100%;
+        
+    }
+
+   
+    .contactWrapper{
+        padding:50px;
+    }
+    .box1{
+        order:1;
+    }
+
+    .box2{
+        order:2;
+    }
+    .box3{
+        order:4;
+    }
+    .box4{
+        order:3;
+    }
+    .box5{
+        order:5;
+    }
+
+    .box6{
+        order:6;
+    }
+    h2{
+        padding-top:15%;
+    }
+    .arrow{
+        display:block;
+    }
+
+}
+
+@media (min-width: 700px) {
+    .contactWrapper {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      justify-content:center;
+      
+    }
+    .contactWrapper > * {
+      padding: 2em 2em;
+    }
+  }
+
+
+ @media(min-width: 600px) and (max-width:1023px){
+ 
+    .flex-nav ul{
+        flex-direction:column;
+        width:65%;
+        height:100vh;
+        justify-items:flex-start;
+        position:absolute;
+        top:0;
+        right:0;
+    }header{
+        height:100vh;
+    }
+    header img{
+        position:absolute;
+        left:0;
+        bottom:0;
     }
 
     header h1{
@@ -397,75 +546,36 @@ margin:20% auto 0;
         font-size:1.5rem;
     }
 
-    .picture{
-        width:60%;
-    }
-    .element1, .element2{
-        flex-basis:  50%;
-        flex-direction: column;
-        align-items:center;
-        }
-    
-        .m-halfbleed{
-            max-width:1000px;
-            margin:0 auto
-        }
 
     .hobbyWrapper{
+        display:flex;
         flex-direction:row;
-     
-
+        flex-wrap:wrap;
     }
-    .box1, .box2, .box3, .box4, .box5, .box6{
-        flex-basis:50%;
+    .box1, .box4, .box5{
+        min-height:300px;
+    }
+
         
-    }
-    .contact {
-        padding: 10%;
-      }
-}
-
-@media(min-width:568px) and (orientation:landscape){
-    .picture{
-        width:45%;
-    }
-    .element1, .element2{
-        flex-basis:  50%;
-        flex-direction: column;
-        align-items:center;
-        }
-    
-        .m-halfbleed{
-            max-width:1000px;
-            margin:0 auto
-        }
-        
-    .hobbyWrapper{
-        flex-direction:row;
-     
-
-    }
+   
     .box1, .box2, .box3, .box4, .box5, .box6{
-        flex-basis:50%;
+        flex-basis:100%;
         
     }
 
     .box1{
         order:1;
     }
-    
+
     .box2{
         order:2;
     }
-
     .box3{
         order:4;
     }
-    
     .box4{
         order:3;
     }
-
     .box5{
         order:5;
     }
@@ -473,137 +583,39 @@ margin:20% auto 0;
     .box6{
         order:6;
     }
+
     .contactWrapper{
         padding:50px;
     }
-    
 
+    h2{
+        padding-top:15%;
+    }
+
+    .arrow{
+        display:block;
+    }
 }
- @media(min-width: 1000px){
-    header img{
-     width: auto;
-    height: 100%;
-    position: relative;
-    left: -40%;
-       
-    }
 
-    header hgroup{
-        top:23%;
-        left:55%;
-        
-    }
-    header h1{
-        font-size:3.5rem;
-    }
-    header h3{
-        font-size:1.6rem;
-    }
 
-    .flex-nav ul{
-        flex-direction:row;
-        flex-wrap:nowrap;
-  
-        width: 100%;
-        height:10vh;
-        
-       
-        
-     }
+   
+   
   
     
 
-    .flex-nav li{
-        flex: 3;
-    }
 
-    .picture{
-        width:45%;
-        height:35em;
+ 
 
-    }
-
-    .picture:last-child{
-        transform:rotate(5deg);
-    }
-
-    .picture img{
-        width:70%;
-       
-        align-self:center;
-
-    }
-
-    .picture figcaption{
-        text-align: center;
-        line-height: 1;
-        align-self: flex-start;
-        margin:20px 25px;
-        padding:5px;
-    }
+    
 
    
-    
 
     
     
     
 
-}
 
-@media(min-width: 1000px) and (orientation:landscape){
-    .picture{
-        width:25%;
-        height:30em;
-        margin:30px 20px;
-    }
-
-    .picture:nth-child(odd){
-        transform:rotate(5deg);
-    }
-
-    .picture:nth-child(even){
-        transform:rotate(-5deg);
-    }
-
-    .picture img{
-        width:60%;
-        align-self:center;
-
-    }
-
-    .picture figcaption{
-        font-size:13px;
-        text-align: center;
-        line-height: 1.5;
-        align-self: flex-start;
-    }
-
-    .picture:hover{
-        
-        transform:scale(1.2);
-    }
-   
     
-    header img{
-       width: auto;
-       height: 100%;
-       position: relative;
-       left: -40%;
-    }   
-    
-          
-
-}
-    
-@media(min-width: 1200px){
-    header img{
-        width: 100%;
-        height: 99vh;
-        position: relative;
-        left: 0%;
-     }  
-}
 
 
 @keyframes arrowColor{
