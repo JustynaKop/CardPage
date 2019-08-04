@@ -17,6 +17,7 @@ $(document).ready(function(){
             menuVisible = true;
             $(".flex-nav ul").slideToggle("slow", function() {
                 refreshMeuVisibility();
+                
             });
         });
         $(".cross").click(function() {
@@ -25,6 +26,7 @@ $(document).ready(function(){
             menuVisible = false;
             $(".flex-nav ul").slideToggle("slow", function() {
                 refreshMeuVisibility();
+              
             });
         })
         $(".arrow").on("click", function(){
