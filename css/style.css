@@ -50,30 +50,19 @@ header img{
     width: 100%;
     text-align:center;
     transition: all 0.5s;
-
 }
-.flex-nav a:hover{
-    color: #8000a8;
-}
-.flex-nav li:hover{
-    background-color:#00f4ba;
-    color: #8000a8;
-    border-radius:5px;
-}
-
 .flex-nav ul{
     position:fixed;
     right:0;
-    
     top:0;
     bottom:0;
     width:100%;
     height:10vh;
-    
-   
     background-color:#ba00f4;
-    
     border: 1px solid #8000a8;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display:flex;
     flex:3;
     list-style: none;
@@ -83,14 +72,9 @@ header img{
     flex-direction:row;
     flex-wrap:nowrap;
     justify-content:space-between;
-   
-    
-    
 }
-
 .flex-nav li{
     display:block;
-    background-color:#ba00f4ba;
     border-bottom:1px solid #8000a8;
     text-transform:uppercase;
     font-size:1.3em;
@@ -99,7 +83,14 @@ header img{
     align-items:center;
     flex:3;
 }
-
+.flex-nav a:hover{
+    color: #8000a8;
+}
+.flex-nav li:hover{
+    background-color:#00f4ba;
+    color: #8000a8;
+    border-radius:5px;
+}
 header hgroup{
     position:absolute;
     top:50%;
@@ -107,18 +98,14 @@ header hgroup{
     z-index:2;
     text-align:center;
     text-transform:uppercase;
-    line-height:1.5;
-    
+    line-height:1.5;   
 }
-
 header h1{
     font-size:3em;
 }
-
 header h3{
     font-size:1.5em;
 }
-
 .arrow{
     width:70px;
     height:70px;
@@ -130,14 +117,10 @@ header h3{
     font-size:2rem;
     text-align:center;
     animation: arrowColor 2s infinite reverse;
-    display:none;
-   
+    display:none;  
 }
-
-
 #arrow:hover{
-    text-shadow:0 15px 0 white, 0 30px white;
-    
+    text-shadow:0 15px 0 white, 0 30px white;    
 }
 /*zaczyna się main*/
 .aboutme, .hobby, .gallery, .contact{
@@ -148,9 +131,7 @@ header h3{
     background-color:#F4BA00;
     position:relative;
     z-index:2;
-
 }
-
 /*nagłówki sekcji*/
 h2{
     text-align:right;
@@ -171,7 +152,6 @@ h2::after{
 
 
 /* sekcjaaboutme*/
-
 .aboutmeText{
     line-height:2;
     
@@ -186,12 +166,14 @@ h2::after{
 }
 /*sekcja hobby*/
 .hobbyWrapper{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display:flex;
     flex-direction:row;
     flex-wrap:wrap;
     padding: 0 2em;
 }
-
 .box1{
     background-image:url('../img/t2.jpg');
 }
@@ -208,6 +190,8 @@ h2::after{
 }
 .box2, .box3, .box6{
     padding:2em;
+    word-wrap: break-word;
+    hyphens: auto;
     text-align:justify;
     line-height:1.5;
     background-color:#ba00f4;
@@ -224,14 +208,15 @@ h2::after{
 }
 /*css galeria*/
 .galleryWraper{
-    
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display:flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding-bottom:5em;
     z-index:4;
 }
-
 .picture{
     background:white;
     padding:10px;
@@ -239,6 +224,9 @@ h2::after{
     border-radius: 5px;
     box-sizing:border-box;
     border: 1px solid silver;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display:flex;
     justify-content:space-around;
     flex-wrap:wrap;
@@ -333,6 +321,49 @@ button:hover, button:focus {
     background: #00dba7;
     outline: 0;
 }
+.socialsWrapper{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 50px;
+    background-color:#F4BA00;
+}
+.socials-nav a
+{
+    color:#8000a8;;
+    font-weight:400;
+    letter-spacing: 2px;
+    text-decoration: none;
+    padding-bottom:30px;
+    display: inline-block;
+    text-align:center;
+    transition: all 0.5s; 
+}
+
+.socials-nav ul{
+    width:50%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:flex;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    z-index:3;
+    flex-direction:row;
+    flex-wrap:nowrap;    
+}
+.socials-nav li{
+    display:block;
+    flex:1;
+    padding:0 1em;
+    font-size:2em;   
+}
+.socials-nav a:hover{
+    color: #00dba7;
+}
+.socials-nav li:hover{   
+    color: #8000a8; 
+}
 /*zapytania o media*/
 @media(orientation: portrait){
     h3 span::after{
@@ -392,6 +423,9 @@ button:hover, button:focus {
         padding: 1em;
     }
     .aboutmeText{
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display:flex;
         flex-direction:column;
     }
@@ -401,6 +435,9 @@ button:hover, button:focus {
     }
 
     .hobbyWrapper{
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display:flex;
         flex-direction:row;
         flex-wrap:wrap;
@@ -438,6 +475,22 @@ button:hover, button:focus {
     .arrow{
         display:block;
     }
+    .flex-nav li{
+        flex-basis: 100%;
+    }
+    .socials-nav ul{
+
+        justify-content:center;
+        width:25%;
+    }
+    .socials-nav li{
+        font-size:1.2em;
+    }
+    .socials-nav a{
+        padding-bottom:5px;
+    }
+
+
 }
 @media (min-width: 700px) {
     .contactWrapper {
@@ -476,6 +529,9 @@ button:hover, button:focus {
         font-size:1.5rem;
     }
     .hobbyWrapper{
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display:flex;
         flex-direction:row;
         flex-wrap:wrap;
