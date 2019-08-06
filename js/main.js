@@ -11,6 +11,13 @@ $(document).ready(function(){
             initializeMenuState();
             refreshMeuVisibility();
         })
+        $(".flex-nav a").click(function() {
+            if (!hamburgerMode)
+                return;
+            $(".flex-nav ul").hide();
+            menuVisible = false;
+            refreshMeuVisibility();
+        });
         $(".hamburger").click(function() {
             if (!hamburgerMode)
                 return;
