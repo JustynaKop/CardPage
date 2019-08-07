@@ -177,11 +177,7 @@ h2::after{
     margin-right:10%;
     text-align:justify;
 }
-.aboutmeText img{
-    float:left;
-    padding:0 2em 0 0 ;
-   
-}
+
 /*sekcja hobby*/
 .hobbyWrapper{
     display: -webkit-box;
@@ -624,6 +620,11 @@ button:hover, button:focus {
     header h3{
         font-size:1.5rem;
     }
+    .aboutmeText img{
+        float:left;
+        padding:0 2em 0 0 ;
+       
+    }
     .hobbyWrapper{
         display: -webkit-box;
         display: -ms-flexbox;
@@ -684,6 +685,11 @@ button:hover, button:focus {
 }
 
 @media (min-width:1024px){
+    .aboutmeText img{
+        float:left;
+        padding:0 2em 0 0 ;
+       
+    }
     .picture:nth-child(odd){
         -webkit-transform:rotate(5deg);
             -ms-transform:rotate(5deg);
