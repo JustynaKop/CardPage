@@ -79,7 +79,6 @@ header img{
     list-style: none;
     margin: 0 auto;
     padding: 0;
-    
     -webkit-box-orient:horizontal;
     -webkit-box-direction:normal;
         -ms-flex-direction:row;
@@ -369,15 +368,15 @@ button:hover, button:focus {
 }
 .socials-nav a
 {
-    color:#8000a8;;
+    color:#8000a8;
     font-weight:400;
     letter-spacing: 2px;
     text-decoration: none;
     padding-bottom:30px;
     display: inline-block;
     text-align:center;
-    -webkit-transition: all 0.5s;
-    -o-transition: all 0.5s;
+   /* -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;*/
     transition: all 0.5s; 
 }
 
